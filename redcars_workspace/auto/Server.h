@@ -2,7 +2,7 @@
  * Server.h
  *
  *  Created on: 29 Oct 2020
- *      Author: Merlijn
+ *      Author: yodas
  */
 
 #ifndef SERVER_H_

@@ -2,7 +2,7 @@
  * Klant.cpp
  *
  *  Created on: 29 Oct 2020
- *      Author: yodas
+ *      Author: Merlijn
  */
 
 #include "Klant.h"
