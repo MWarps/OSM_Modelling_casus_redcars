@@ -2,7 +2,7 @@
  * Car.cpp
  *
  *  Created on: 29 Oct 2020
- *      Author: Merlijn
+ *      Author: yodas
  */
 
 #include "Car.h"
@@ -16,3 +16,8 @@ Car::~Car() {
 	// TODO Auto-generated destructor stub
 }
 
+std::vector<Car> Car::showAvailableCars() {
+}
+
+void Car::setAvailable(bool available) {
+}

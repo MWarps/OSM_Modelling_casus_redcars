@@ -1,18 +1,18 @@
 /*
- * Car.cpp
+ * Klant.cpp
  *
  *  Created on: 29 Oct 2020
- *      Author: Merlijn
+ *      Author: yodas
  */
 
-#include "Car.h"
+#include "Klant.h"
 
-Car::Car() {
+Klant::Klant() {
 	// TODO Auto-generated constructor stub
 
 }
 
-Car::~Car() {
+Klant::~Klant() {
 	// TODO Auto-generated destructor stub
 }
 

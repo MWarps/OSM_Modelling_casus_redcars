@@ -7,7 +7,8 @@
 
 #include "Paal.h"
 
-Paal::Paal() : checkedIn(false){
+Paal::Paal() :
+		checkedIn(false) {
 
 }
 
@@ -21,25 +22,31 @@ bool Paal::checkAuthentication() {
 }
 
 void Paal::checkPas() {
-	setCheckedIn(checkAuthentication());
+	if (!carDetector.detectNewCar()) {
+		setCheckedIn(checkAuthentication());
+	}else if(carDetector.detectNewCar()) {
+		checkedIn = !server.checkAuthentication(pasLezer.getPasNummer());
+		light.stopFlickering();
+		display.displayCheckoutSuccesfull();
+	}
 
 }
 
 void Paal::coreLoop() {
-	while(true) {
-		if(pasLezer.detectPas()) {
+	while (true) {
+		if (pasLezer.detectPas()) {
 			checkPas();
-			if(checkedIn) {
+			if (checkedIn) {
 				display.displayCheckInSuccessfull();
-			} else {
-				display.displayCheckInFailed();
 			}
 		}
 
-		if(CarDetector.detectNewCar()) {
-
+		if (carDetector.detectNewCar()) {
+			light.startFlickering();
+			if (pasLezer.detectPas()) {
+				checkPas();
+			}
 		}
-
 
 	}
 }

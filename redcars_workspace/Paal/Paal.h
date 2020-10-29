@@ -29,7 +29,7 @@ private:
 	bool checkedIn;
 	Server server;
 	PasLezer pasLezer;
-	LightControl lightControl;
+	LightControl light;
 	CarDetector carDetector;
 	DisplayController display;
 };

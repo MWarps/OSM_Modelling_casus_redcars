@@ -2,7 +2,7 @@
  * DisplayController.h
  *
  *  Created on: 29 Oct 2020
- *      Author: yodas
+ *      Author: Merlijn
  */
 
 #ifndef DISPLAYCONTROLLER_H_
@@ -13,9 +13,7 @@ public:
 	virtual ~DisplayController();
 
 	virtual void displayCheckInSuccessfull() = 0;
-	virtual void displayCheckInFailed() = 0;
 	virtual void displayCheckoutSuccesfull() = 0;
-	virtual void displayCheckoutFailed() = 0;
 };
 
 #endif /* DISPLAYCONTROLLER_H_ */
